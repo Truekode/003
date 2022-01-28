@@ -28,7 +28,21 @@
 <script>
   "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  function splitToDigits(num) {
+    let digits = [];
+    while (num) {
+      digits.push(num % 10);
+      num = Math.floor(num/10);
+    }
+    return digits;
+  }
+
+  let N = 0;
+  while (N != 'true') {
+    N = prompt('Введите число или "true" для выхода');
+    let num = splitToDigits(N);
+    console.log("В числе "+N+" количество сотен: "+num[2]+", десятков: "+num[1]+", единиц: "+num[0]+"");
+  }
 </script>
 </body>
 </html>
